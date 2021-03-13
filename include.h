@@ -18,11 +18,12 @@ Phone of Student #2:016-2632704
 
 #include<iostream>
 #include<iomanip>
-#include<cstdlib>
 #include<string>
 #include<vector>
-#include<ctime>
-#include<unistd.h>
+#include<chrono>
+#include<thread>
+
+#define clear() printf("\033[H\033[J")
 
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */

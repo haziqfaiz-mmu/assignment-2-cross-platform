@@ -256,7 +256,7 @@ void Rover::displayRealMap(){
 //display the player map contained in the mapper object
 void Rover::displayMapper(){
     
-    system("clear");
+    clear();
 
     for(int i=0; i<mapper.getDimY(); ++i){
     cout<<" ";

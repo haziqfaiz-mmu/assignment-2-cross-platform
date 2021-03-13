@@ -26,25 +26,21 @@ void Game::WelcomeLights(){
 	cout <<RED<<"   WELCOME TO MARS ROVER!!!"<<endl;
     cout <<RED<<"   LET'S EXPLORE MARS!!!"<<endl;
     cout <<RED<<"*******************************"<<endl;
-	usleep(1000);
 
     cout <<"                        "<<endl;
     cout <<"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<<endl;
 	cout <<"   MISSION:FIND GOLDS!!!"<<endl;
     cout <<"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<<endl;
-	usleep(2000);
 	
 	//changeColour(GREEN);
     cout <<GREEN<<"                "<<endl;
     cout <<GREEN<<"============================="<<endl;
 	cout <<GREEN<<"   PRESENTED BY:"<<endl;
-	usleep(2000);
 	
 	//changeColour(BLUE);
 	cout <<GREEN<<"   HAZIQ"<<endl;
     cout <<GREEN<<"   KAVIILASAN"<<endl;
     cout <<GREEN<<"============================="<<endl;
-	usleep(2000);
 }
 
 void Game::alien(){
@@ -52,14 +48,12 @@ void Game::alien(){
     cout<<BOLDRED<<"         -888888888888888-        "<<endl;
      cout<<RED<<"      8888888888888888888888      "<<endl;
      cout<<RED<<"    88888888888888888888888888    "<<endl;
-     usleep(1000);
      cout<<RED<<"   8888888888888888888888888888   "<<endl;
      cout<<RED<<"  888888888888888888888888888888  "<<endl;
      cout<<RED<<"    88888     p88888q     88888   "<<endl;
      cout<<RED<<"     88888    p88888q    88888    "<<endl;
      cout<<RED<<"       8888   p88888q   8888      "<<endl;
      cout<<RED<<"        888888888888888888        "<<endl;
-     usleep(1000);
      cout<<RED<<"          88888888888888          "<<endl;
      cout<<RED<<"            8888888888            "<<endl;
      cout<<RED<<"              8888888             "<<endl;
@@ -80,7 +74,7 @@ void Game::startsequence(){
     cout<<setw(40)<<"Collecting the booster will gives the rover 5 move points "<<endl;
 
 	cout << "\n\n\n";
-    sleep(3);
+    this_thread::sleep_for(chrono::milliseconds(5000) );
 
 }
 
@@ -129,7 +123,7 @@ void Game::displayRealMap(){
 
 void Game::gameOverSequence(int x){
 
-    system("clear");
+    clear();
     cout << "\n";
 	
 	EndingLights(x);
@@ -137,12 +131,12 @@ void Game::gameOverSequence(int x){
     gameOver();
 	
 	cout << "\n\n\n";
-    sleep(3);
+    this_thread::sleep_for(chrono::milliseconds(5000) );;
 }
 
 void Game::successSequence(int x){
 
-    system("clear");
+    clear();
     cout << "\n";
 	
 	EndingLights(x);
@@ -150,5 +144,5 @@ void Game::successSequence(int x){
     success();
 	
 	cout << "\n\n\n";
-    sleep(3);
+    this_thread::sleep_for(chrono::milliseconds(5000) );;
 }

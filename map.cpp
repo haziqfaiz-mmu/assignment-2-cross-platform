@@ -53,7 +53,7 @@ void Map::resize(int new_dimX, int new_dimY, char ch){
 //display the map
 void Map::display(){
 
-    system("clear");
+    clear();
 
     for(int i=0; i<dimY; ++i){
     cout<<" ";
